@@ -1,0 +1,114 @@
+.profilContainer {
+  i {
+    cursor: pointer;
+  }
+
+  .imgProfil {
+    width: 100%;
+    margin: 20px auto;
+    img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto;
+      object-fit: cover;
+      margin-bottom: 40px;
+    }
+  }
+
+  .formPsw {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .btn_disable {
+    pointer-events: none;
+    background-color: #c4c4c4;
+    box-shadow: none;
+    opacity: 0.5;
+  }
+
+  .btn_info {
+    background-color: rgb(245, 75, 75);
+    box-shadow: 0px 0px 0px red;
+    font-size: 16px;
+    pointer-events: none;
+    margin: 10px 0;
+    &:after {
+      display: none;
+    }
+    &:before {
+      display: none;
+    }
+  }
+
+  #btn_suppression_compte {
+    cursor: pointer;
+  }
+
+  .btn_suppression {
+    background-color: rgb(245, 75, 75);
+    box-shadow: 0px 0px 0px red;
+    &:after {
+      display: none;
+    }
+    &:before {
+      display: none;
+    }
+    &:hover {
+      box-shadow: 0px 0px 0px red;
+      color: black;
+    }
+  }
+
+  .card_profil {
+    width: 90vw;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #f1f1f1;
+    border-radius: 10px;
+    background: linear-gradient(315deg, #ffffff88 0%, #ffffff05 100%);
+    box-shadow: 2px 2px 4px #f1f1f1;
+  }
+
+  .overlay_img_site {
+    background-color: #55555555;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+  }
+
+  .images_site {
+    border: 3px solid black;
+    background-color: #333333cc;
+    @include flexMid;
+    border-radius: 10px;
+    width: 90vw;
+    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .image_site {
+      margin: 10px;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+  }
+
+  .dnone {
+    display: none;
+    transition: all 1s;
+  }
+}

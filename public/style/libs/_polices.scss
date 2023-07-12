@@ -1,0 +1,31 @@
+h1,
+h2,
+h3,
+h4,
+p {
+  color: $noir;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: $noir;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+h1 {
+  font-size: clamp(25px, calc(20px + 1.85vw), 45px);
+  letter-spacing: calc(1px + 0.12vw);
+}
+h2 {
+  font-size: clamp(20px, calc(20px + 1vw), 33px);
+  letter-spacing: calc(1px + 0.04vw);
+}
+h3 {
+  font-size: clamp(16px, calc(14px + 0.6vw), 22px);
+  letter-spacing: calc(1px + 0.02vw);
+}
+h4,
+p {
+  font-size: clamp(14px, calc(12px + 0.4vw), 18px);
+}
