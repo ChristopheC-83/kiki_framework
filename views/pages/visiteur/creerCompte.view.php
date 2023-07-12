@@ -2,7 +2,7 @@
 
     <h1>Page de création de compte</h1>
 
-    <form action="validation_creerCompte" method="post" class="form_entry_form entry_creation">
+    <form action="validation_creerCompte" method="post" class="formulaire">
 
         <div class="entryForm">
             <label for="login">Nom : </label>
