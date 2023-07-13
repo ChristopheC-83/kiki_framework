@@ -2,7 +2,7 @@
 
 const mdpMasque = document.querySelector(".fa-eye-slash")
 const mdpVisible = document.querySelector(".fa-eye")
-const passwordCreerCompte = document.querySelector(".passwordCreerCompte")
+const passwordCreerCompte = document.querySelector(".password")
 
 mdpMasque.addEventListener("click", ()=>{
   mdpMasque.classList.add("dnone")

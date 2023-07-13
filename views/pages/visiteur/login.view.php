@@ -2,7 +2,7 @@
 
     <h1>Page de connexion</h1>
 
-    <form action="<?=URL?>validation_login" method="post" class="form_entry_form">
+    <form action="<?=URL?>validation_login" method="post" class="formulaire">
 
         <div class="entryForm">
             <label for="login">Nom : </label>
@@ -11,9 +11,10 @@
         <div class="entryForm">
             <label for="password">Password : </label>
             <div class="afficherMDP">
-                <input type="password" id="password" name="password">
-                <i class="fa-regular fa-eye-slash"></i>
-                <i class="fa-regular fa-eye dnone"></i>
+                <input type="password" id="password" name="password" class="password">
+                <div class="eye"><i class="fa-regular fa-eye-slash"></i>
+                    <i class="fa-regular fa-eye dnone"></i>
+                </div>
             </div>
         </div>
 
@@ -25,8 +26,8 @@
         </div>
         
         
+        <a href="<?=URL?>mdpOublie" class="lienFormulaire">mot de passe oublié</a>
     </form>
-    <a href="<?=URL?>mdpOublie">mot de passe oublié</a>
 
 
 

@@ -3,7 +3,7 @@
     <h1>Mot de passe oublié</h1>
     
     <br>
-    <form action="<?=URL?>envoi_mdpOublie" method="post" class="form_entry_form">
+    <form action="<?=URL?>envoi_mdpOublie" method="post" class="formulaire">
         
     <div class="entryForm">
             <p>Aprés vérification de votre identité, <br>un mot de passe vous sera envoyé par mail.</p><br>

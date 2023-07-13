@@ -23,7 +23,7 @@ header {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    z-index: 2;
+    z-index: 4;
   }
 
   a {
@@ -103,7 +103,7 @@ header {
         top: 0;
         transform: translateY(-100%);
         transition: all 0.5s;
-        z-index: 2;
+        z-index: 4;
       }
 
       .voletMenuOpen {
@@ -123,7 +123,7 @@ header {
 
       .hamburger {
         display: block;
-        z-index: 3;
+        z-index:6;
       }
     }
   }

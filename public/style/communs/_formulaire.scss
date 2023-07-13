@@ -1,13 +1,84 @@
-.formulaire{
+.formulaire {
+  width: fit-content;
+  min-width: 400px;
+  max-width: 650px;
+  height: fit-content;
+  min-height: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 
+  .entryForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 
+    label {
+      font-size: clamp(16px, calc(14px + 0.6vw), 22px);
+      letter-spacing: calc(1px + 0.02vw);
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
 
+    input {
+      margin-bottom: 20px;
+      width: 100%;
+      height: 40px;
+      border-radius: 8px;
+      font-size: clamp(16px, calc(14px + 0.6vw), 22px);
+      background-color: #fff;
+    }
+    .dnone {
+      display: none;
+    }
+    input:focus {
+      outline-color: $gris;
+    }
+    button {
+      width: 100%;
+      font-size: clamp(16px, calc(14px + 0.6vw), 22px);
+      padding: 10px;
+      margin-top: 30px;
+      border-radius: 8px;
+      background-color: #fff;
+      transition: all 0.33s;
 
+      &:hover {
+        color: $blanc;
+        background-color: $noir;
+      }
+    }
+  }
+  .lienFormulaire {
+    margin: 0 auto;
+    margin-top: 20px;
+    font-size: clamp(16px, calc(14px + 0.6vw), 22px);
+    color: $noir;
+  }
 
-
+  .afficherMDP {
+    display: flex;
+    .eye {
+      width: 40px;
+      height: 40px;
+      margin-left: 10px;
+      @include flexMid;
+      font-size: clamp(16px, calc(14px + 0.6vw), 22px);
+    }
+  }
 }
 
-@media screen and (max-width: 900px){
-
-
+@media screen and (max-width: 900px) {
+  .formulaire {
+    width: 94%;
+    min-width: 300px;
+    margin: 0 auto;
+    .entryForm {
+      button {
+        color: $blanc;
+        background-color: $noir;
+      }
+    }
+  }
 }

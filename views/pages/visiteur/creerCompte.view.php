@@ -11,9 +11,10 @@
         <div class="entryForm">
             <label for="passwordCreation">Password : </label>
             <div class="afficherMDP">
-                <input type="password" id="passwordCreation" name="password" class="passwordCreerCompte">
-                <i class="fa-regular fa-eye-slash"></i>
-                <i class="fa-regular fa-eye dnone"></i>
+                <input type="password" id="passwordCreation" name="password" class="password">
+                <div class="eye"><i class="fa-regular fa-eye-slash"></i>
+                    <i class="fa-regular fa-eye dnone"></i>
+                </div>
             </div>
         </div>
         <div class="entryForm">
