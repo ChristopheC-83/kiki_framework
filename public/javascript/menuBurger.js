@@ -1,3 +1,5 @@
+// Menu burger responsive
+
 const spanBurger1 = document.querySelector(".spanBurger1");
 const spanBurger2 = document.querySelector(".spanBurger2");
 const spanBurger3 = document.querySelector(".spanBurger3");
@@ -24,3 +26,13 @@ hamburger.addEventListener("click", ()=>{
     }
     console.log(menuOpen)
 })
+
+
+// Récupérer le lien actif en utilisant l'URL de la page
+const url = window.location.href;
+const lienActif = document.querySelector('.navigation a[href="' + url + '"]');
+
+// Ajouter la classe "active" au lien actif
+if (lienActif) {
+  lienActif.classList.add('lienActif');
+}
