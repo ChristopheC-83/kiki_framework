@@ -1,39 +1,39 @@
-FrameWork perso basique 
+<h1>FrameWork perso base site dynamique </h1>
 
-PHP architecture MVC
-avec javascript (gsap)
-style en sass
-lien base de données sql
+PHP architecture MVC<br>
+avec javascript (gsap)<br>
+style en sass<br>
+lien base de données sql<br>
+<br>
+Site responsive<br>
+<br>
+Relativement vierge et épurer pour en faire ce que vous voulez !<br><br>
 
-Site responsive
+Le but de cet outil est de pouvoir créer un site dynamique<br><br>
+avec une base prenant en charge la gestion des utilisateurs pour les<br>
+visiteurs, utilisateurs, administrateurs<br><br>
+avec <br>
+inscription, connexion, gestion profil, suppression compte.<br><br>
 
-Realtivement vierge et épurer pour en faire ce que vous voulez !
+L'utilisateur pourra choisir une image de profil personnelle<br><br> ou <br><br>
+une image proposée par le site.<br><br>
 
-Le but de cet outil est de pouvoir créer un site dynamique
-avec une base prenant en charge la gestion des utilisateurs pour les
-visiteurs, utilisateurs, administrateurs
-avec 
-inscription, connexion, gestion profil, suppression compte
+L'aministrateur pourra gérer les droits et supprimer un compte.<br><br>
 
-L'utilisateur pourra choisir une image de profil personnelle ou 
-une image proposée par le site.
-
-L'aministrateur pourra gérer les droits et supprimer un compte.
-
-dans le même dossier que pdo.model.php
-créez un fichier 
-donnees_perso.model.php 
-contenant :
+dans le même dossier que pdo.model.php<br>
+créez un fichier <br>
+donnees_perso.model.php <br>
+contenant :<br><br>
 
 
-<?php
+<?php<br><br>
 
-// A redefinir avec nouvelle base de données pour chaque projet
+// A redefinir avec nouvelle base de données pour chaque projet<br><br>
 
-define("mysql","ip de votre hebergeur" );
-define("dbname","nom_bdd" );
-define("user","nom_utilisateur_bdd" );
-define("mdpbd","code de connexion à la bdd" );
+define("mysql","ip de votre hebergeur" );<br>
+define("dbname","nom_bdd" );<br>
+define("user","nom_utilisateur_bdd" );<br>
+define("mdpbd","code de connexion à la bdd" );<br><br>
 
 
 
