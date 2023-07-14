@@ -13,6 +13,7 @@ function getPasswordUser($login)
     $resultat = $stmt->fetch(PDO::FETCH_ASSOC);
     $stmt->closeCursor();
     return $resultat['password'];
+    
 }
 
 function isCombinaisonValide($login, $password)
