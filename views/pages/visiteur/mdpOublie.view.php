@@ -1,4 +1,4 @@
-<div class="animTitres <?= $css ?>">
+<div class="animTitres">
 
     <h1>Mot de passe oublié</h1>
     

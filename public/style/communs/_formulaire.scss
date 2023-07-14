@@ -55,6 +55,7 @@
     margin-top: 20px;
     font-size: clamp(16px, calc(14px + 0.6vw), 22px);
     color: $noir;
+    text-underline-offset: 5px;
   }
 
   .afficherMDP {

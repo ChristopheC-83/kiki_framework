@@ -1,4 +1,4 @@
-<div class="animTitres <?= $css ?>">
+<div class="animTitres">
 
     <h1>Gestion des droits</h1>
     <h2>Gestion Droits pour administrateurs Contiendra</h2>

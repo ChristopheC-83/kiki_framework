@@ -15,7 +15,7 @@ function validation_modifImage($file)
         suppressionImageUtilisateur($_SESSION['profil']['login']);
         $nomImageBd = "profils/" . $_SESSION['profil']['login'] . "/" . $nomImage;
         if (bdAjoutImage($_SESSION['profil']['login'], $nomImageBd, 0)) {
-            ajouterMessageAlerte("Modfication de l'image effectuée.", "vert");
+            // ajouterMessageAlerte("Modfication de l'image effectuée.", "vert");
             header('location:' . URL . "compte/profil");
         } else {
             ajouterMessageAlerte("Modfication de l'image non effectuée.", "rouge");
@@ -66,7 +66,7 @@ function validation_ChangerAvatar($img)
     suppressionImageUtilisateur($_SESSION['profil']['login']);
     $image = "profils/profils_site/" . $img;
     if (modifImageBD($_SESSION['profil']['login'], $image, 1)) {
-        ajouterMessageAlerte("Modfication de l'image effectuée.", "vert");
+        // ajouterMessageAlerte("Modfication de l'image effectuée.", "vert");
 
         header('location:' . URL . "compte/profil");
     } else {

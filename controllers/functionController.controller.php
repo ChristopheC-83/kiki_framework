@@ -30,7 +30,7 @@ function sendMail($destinataire, $sujet, $message)
 {
     $headers = "From: Administrateur site <admin@admin.com>";
     if (mail($destinataire, $sujet, $message, $headers)) {
-        ajouterMessageAlerte("Mail envoyé ! <br> Allez regarder votre boîtes !", "vert");
+        // ajouterMessageAlerte("Mail envoyé ! <br> Allez regarder votre boîtes !", "vert");
     } else {
         ajouterMessageAlerte("Mail non parti à ".$destinataire." ! <br> Merci de réessayer.", "rouge");
         

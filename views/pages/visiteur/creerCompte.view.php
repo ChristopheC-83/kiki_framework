@@ -1,4 +1,4 @@
-<div class="animTitres <?= $css ?>">
+<div class="animTitres">
 
     <h1>Page de création de compte</h1>
 

@@ -11,7 +11,7 @@ function validation_login($login, $password)
 {
     if (isCombinaisonValide($login, $password)) {
 
-        ajouterMessageAlerte("Hello " . $login . " ! You're welcome !", "vert");
+        // ajouterMessageAlerte("Hello " . $login . " ! You're welcome !", "vert");
         $_SESSION['profil'] = [
             "login" => $login,
         ];
@@ -45,7 +45,7 @@ function deconnexion()
     session_unset();
     setcookie(COOKIE_NAME, "", time() - 3600);
     header('location:' . URL . "accueil");
-    ajouterMessageAlerte("Vous êtes bien déconnecté.", "vert");
+    // ajouterMessageAlerte("Vous êtes bien déconnecté.", "vert");
 }
 
 function validation_creerCompte($login, $password, $mail)
@@ -56,7 +56,7 @@ function validation_creerCompte($login, $password, $mail)
         $img_site = 1; // car on mettra une image du site par défaut en avatar
         if (bdCreerCompte($login, $passwordCrypte, $mail, $cle, "profils/profils_site/profil_init.jpg", $img_site,  "utilisateur")) {
             sendMailValidation($login, $mail, $cle);
-            ajouterMessageAlerte("Votre compte a été créer. <br> Merci de la valider via le lien envoyé sur votre adresse mail.", "vert");
+            // ajouterMessageAlerte("Votre compte a été créer. <br> Merci de la valider via le lien envoyé sur votre adresse mail.", "vert");
             header('location:' . URL . "accueil");
         } else {
             ajouterMessageAlerte("Echec de la création de votre compte.<br> Merci de recommencer.", "rouge");
@@ -83,24 +83,11 @@ function renvoyerMailValidation($login)
     header('location:' . URL . "login");
 }
 
-// function validation_mailCompte($login, $cle)
-// {
-//     if (bdValidationMailCompte($login, $cle)) {
-//         ajouterMessageAlerte("Le compte de " . $login . " a été activé", "vert");
-//         $_SESSION['profil'] = [
-//             "login" => $login,
-//         ];
-//         header('location:' . URL . "compte/profil");
-//     } else {
-//         ajouterMessageAlerte("Le compte n'a pas été activé", "rouge");
-//         header('location:' . URL . "creerCompte");
-//     }
-// }
 
 function validation_modificationMail($mail)
 {
     if (bdModifMailUser($_SESSION['profil']['login'], $mail)) {
-        ajouterMessageAlerte("Le mail est modifié.", "vert");
+        // ajouterMessageAlerte("Le mail est modifié.", "vert");
     } else {
         ajouterMessageAlerte("Aucune modification effectuée.", "rouge");
     }
@@ -113,7 +100,7 @@ function validation_modificationMDP($oldPassword, $newPassword, $verifNewPasswor
         if (isCombinaisonValide($_SESSION['profil']['login'], $oldPassword)) {
             $mdpCrypte = password_hash($newPassword, PASSWORD_DEFAULT);
             if (bdModifMDP($_SESSION['profil']['login'], $mdpCrypte)) {
-                ajouterMessageAlerte("Mot de passe modifié !", "vert");
+                // ajouterMessageAlerte("Mot de passe modifié !", "vert");
                 header('location:' . URL . "compte/profil");
             } else {
                 ajouterMessageAlerte("La modification a échoué.", "rouge");
@@ -136,7 +123,7 @@ function validation_suppressionCompte()
 
     if (bdSuppCompte($_SESSION['profil']['login'])) {
         deconnexion();
-        ajouterMessageAlerte("Suppression du compte effectuée.", "vert");
+        // ajouterMessageAlerte("Suppression du compte effectuée.", "vert");
         header('location:' . URL . "accueil");
     } else {
         ajouterMessageAlerte("La suppression du compte a échoué.<br>Contacter l'administrateur.", "rouge");
@@ -153,7 +140,7 @@ function validation_mdpOublie($login, $mail)
         bdChangementMdpOublie($login, $newMdp);
         $destinataire = $mail;
         $sujet = "on a oublié son mdp ?";
-        $message = "on va résoudre ça ! \r\nEssaye avec : \r\n \r\n" . $newMdp . " \r\n \r\nChange le sur le site... lui tu ne risque pas de le retenir !";
+        $message = "on va résoudre ça ! \r\nEssaye avec : \r\n \r\n" . $newMdp . " \r\n \r\nChange le sur le site... lui tu ne risques pas de le retenir !";
         ajouterMessageAlerte("Un nouveau mdp envoyé par mail", "vert");
         sendMail($destinataire, $sujet, $message,);
     }
@@ -164,7 +151,7 @@ function isCombinaisonMailOublieValide($login, $mail)
 {
     $maildBd = getMailUser($login);
     if ($maildBd === $mail) {
-        ajouterMessageAlerte("Bon mail", "vert");
+        // ajouterMessageAlerte("Bon mail", "vert");
         return true;
     } else {
         ajouterMessageAlerte("mauvais mail", "rouge");
@@ -176,7 +163,7 @@ function bdChangementMdpOublie($login, $newMdp)
 {
     $mdpCrypte = password_hash($newMdp, PASSWORD_DEFAULT);
     if (bdModifMDP($login, $mdpCrypte)) {
-        ajouterMessageAlerte("Mot de passe provisoire actif", "vert");
+        // ajouterMessageAlerte("Mot de passe provisoire actif", "vert");
     } else {
         ajouterMessageAlerte("Echec de la mise en place du nouveau mot de passe", "rouge");
     }

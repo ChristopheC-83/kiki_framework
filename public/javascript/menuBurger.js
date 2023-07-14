@@ -19,6 +19,7 @@ function closeMenu() {
   overlay.classList.add("dnone");
 }
 
+if(hamburger){
 hamburger.addEventListener("click", () => {
   if (menuOpen === 0) {
     menuOpen = 1;
@@ -32,7 +33,7 @@ hamburger.addEventListener("click", () => {
     closeMenu();
   }
   console.log(menuOpen);
-});
+});}
 if (overlay) {
   overlay.addEventListener("click", () => {
     closeMenu();

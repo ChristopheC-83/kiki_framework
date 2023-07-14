@@ -1,4 +1,4 @@
-<div class = "animTitres <?=$css?>">
+<div class = "animTitres">
 
     <h1>Erreur</h1>
     <h2>Source erreur : </h2>

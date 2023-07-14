@@ -1,4 +1,4 @@
-<div class="animTitres <?= $css ?>">
+<div class="animTitres pageProfil">
 
     <h1><?= $utilisateur['login'] ?> : votre profil</h1>
     <h2>Profil et modifications</h2>
