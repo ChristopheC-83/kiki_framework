@@ -26,7 +26,7 @@ donnees_perso.model.php <br>
 contenant :<br><br>
 
 
-<?php<br><br>
+<? php<br><br>
 
 // A redefinir avec nouvelle base de données pour chaque projet<br><br>
 
