@@ -26,7 +26,6 @@ donnees_perso.model.php <br>
 contenant :<br><br>
 
 
-<? php<br><br>
 
 // A redefinir avec nouvelle base de données pour chaque projet<br><br>
 
@@ -36,6 +35,4 @@ define("user","nom_utilisateur_bdd" );<br>
 define("mdpbd","code de connexion à la bdd" );<br><br>
 
 
-
-?>
 
