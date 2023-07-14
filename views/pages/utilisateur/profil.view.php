@@ -7,17 +7,17 @@
         <div class="imgProfil">
             <img src="<?= URL ?>/public/assets/images/<?= $utilisateur['image'] ?>" alt="photo de profil">
 
-            <p>Changer votre image de profil :</p><br>
-            <form action="<?= URL ?>compte/validation_modifImage" enctype="multipart/form-data" method="post">
+            <p>Changer votre image de profil :</p><br><br>
+            <form action="<?= URL ?>compte/validation_modifImage" enctype="multipart/form-data" method="post" >
                 <label for="image">Par une image perso
                     <i class="fa-solid fa-square-pen" id="btn_modif_img_perso"></i>
-                </label><br>
+                </label><br><br>
                 <input type="file" id="image" name="image" onchange="submit()" value="Parcourir" class="dnone">
             </form>
             <form action="<?= URL ?>compte/validation_modifImageSite" method="post">
                 <label>Par une image du site
                     <i class="fa-solid fa-square-pen" id="btn_modif_img_site"></i>
-                </label><br><br>
+                </label><br><br><br>
             </form>
         </div>
 
@@ -25,30 +25,22 @@
         <br>
         <p>Mail : <?= $utilisateur['mail'] ?> <i class="fa-solid fa-square-pen" id="btn_modif_mail"></i></p>
         <br>
-        
-        <br>
-        <p>Modifier le mot de passe <i class="fa-solid fa-square-pen" id="btn_modif_mdp"></i></p>
-        <br>
-        <p>Supprimer mon compte <span id="btn_suppression_compte">❌</span></p>
-        <div id="suppression_compte" class="dnone">
-            <a href="<?= URL ?>compte/suppressionCompte">
-                <div class="entryForm">
-                    <button id="btn_validation_suppression_compte" class="btn_suppression">Valider la suppression
-                        irréversible<br> de mon compte.</button>
-                </div>
-            </a>
-        </div>
         <div id="modif_mail" class="dnone">
             <br>
-            <form action="<?= URL ?>compte/validation_modificationMail" method="post" class="form_entry_form">
+            <form action="<?= URL ?>compte/validation_modificationMail" method="post" class="entry_form">
                 <div class="entryForm">
                     <input type="mail" id="mail" name="mail" placeholder="Nouveau Mail">
                 </div>
                 <div class="entryForm">
                     <button id="btn_validation_modif_mail">Valider nouveau mail</button>
-                </div>
+                </div><br><br>
             </form>
         </div>
+        
+        <br>
+        <p>Modifier le mot de passe <i class="fa-solid fa-square-pen" id="btn_modif_mdp"></i></p>
+        <br>
+        
         <div id="modif_mdp" class="dnone">
             <br>
             <form action="<?= URL ?>compte/validation_modificationMDP" method="post" class="form_entry_form">
@@ -67,9 +59,19 @@
                 </div>
                 <div class="entryForm">
                     <button id="btn_validation_modif_mdp" class="btn_disable">Valider nouveau mot de passe</button>
-                </div>
+                </div><br><br><br>
             </form>
         </div>
+        <p>Supprimer mon compte <span id="btn_suppression_compte">❌</span></p>
+        <div id="suppression_compte" class="dnone">
+            <a href="<?= URL ?>compte/suppressionCompte">
+                <div class="entryForm">
+                    <button id="btn_validation_suppression_compte" class="btn_suppression">Valider la suppression
+                        irréversible<br> de mon compte.</button>
+                </div>
+            </a>
+        </div>
+       
     </div>
     <div class="overlay_img_site dnone">
 

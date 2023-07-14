@@ -1,18 +1,24 @@
 .pageProfil {
-
-  h1, h2{
-  text-align: center;
+  h1,
+  h2 {
+    text-align: center;
   }
   i {
     cursor: pointer;
+  }
+
+  p,
+  label {
+    font-size: clamp(16px, calc(14px + 0.6vw), 22px);
+    letter-spacing: calc(1px + 0.02vw);
   }
 
   .imgProfil {
     width: 100%;
     margin: 20px auto;
     img {
-      width: 250px;
-      height: 250px;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
       display: block;
       margin: 0 auto;
@@ -70,7 +76,9 @@
     width: 90vw;
     max-width: 600px;
     margin: 0 auto;
+    margin-bottom: 50px;
     padding: 20px;
+    padding-bottom: 40px;
     border: 1px solid #f1f1f1;
     border-radius: 10px;
     background: linear-gradient(315deg, #ffffff88 0%, #ffffff05 100%);
@@ -114,5 +122,17 @@
   .dnone {
     display: none;
     transition: all 1s;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .pageProfil {
+    margin: 0 auto;
+    .card_profil {
+      width: 100%;
+      margin: 0 auto;
+      padding-top: 0;
+      padding-left: 25vw;
+    }
   }
 }
