@@ -1,27 +1,30 @@
-<div class="animTitres">
+<div class="animTitres pageDroits">
 
     <h1>Gestion des droits</h1>
     <h2>Gestion Droits pour administrateurs Contiendra</h2>
 
-    <p>Contenu gestion_droits</p>
+    <div class="pastilleRoleList">
+        <div class="pastilleRole roleAdmin">Administrateur</div>
+        <div class="pastilleRole roleUser">Utilisateur</div>
+    </div>
+
 
     <table>
         <thead>
             <tr>
                 <th>Login</th>
-                
-                <th>Rôle</th>
+
+                <th class="roleGestion">Rôle</th>
                 <th>Mail</th>
                 <th>Supprimer</th>
             </tr>
             <?php foreach ($utilisateurs as $utilisateur) : ?>
 
                 <tr>
-                    <td><?= $utilisateur['login'] ?></td>
 
-                    
+                    <td class="<?php echo $utilisateur['role'] === 'administrateur' ? 'roleAdmin' : 'roleUser'; ?>"><?php echo $utilisateur['login']; ?></td>
 
-                    <td>
+                    <td class="roleGestion">
                         <?php if ($utilisateur['role'] === "administrateur") : ?>
                             <?= $utilisateur['role'] ?>
                         <?php else : ?>
@@ -44,9 +47,8 @@
                     <td><?= $utilisateur['mail'] ?></td>
                     <td>
                         <form action="<?= URL ?>admin/pageAdminSuppressionCompte" method="post">
-                            <button type="submit" 
-                            onclick="return confirm('Êtes-vous sûr de vouloir supprimer => <?= $utilisateur['login'] ?> ?')">
-                            Supprimer</button>
+                            <button type="submit" onclick="return confirm('Êtes-vous sûr de vouloir supprimer => <?= $utilisateur['login'] ?> ?')">
+                                Supprimer</button>
                             <input type="hidden" name="login" value="<?= $utilisateur['login'] ?>">
                         </form>
                     </td>

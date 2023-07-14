@@ -503,31 +503,56 @@ footer {
   transition: all 1s;
 }
 
-@media screen and (max-width: 900px) {
-  .pageProfil {
-    margin: 0 auto;
-  }
-  .pageProfil .card_profil {
-    width: 100%;
-    margin: 0 auto;
-    padding-top: 0;
-    padding-left: 25vw;
-  }
-}
-.droitsContainer table {
+.pageDroits table {
   width: 80%;
   text-align: center;
   color: #f1f1f1;
   margin: 10px auto;
   margin-top: 40px;
+  font-family: "Roboto Condensed", sans-serif;
 }
-.droitsContainer th,
-.droitsContainer td,
-.droitsContainer tr {
+.pageDroits th,
+.pageDroits td,
+.pageDroits tr {
   padding: 15px;
-  border: 1px solid #f1f1f1;
+  border: 1px solid #333;
+  color: #333;
+}
+.pageDroits .pastilleRoleList {
+  width: 90%;
+  margin: 0 auto;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  display: none;
+}
+.pageDroits .pastilleRole {
+  padding: 20px 30px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+@media screen and (max-width: 900px) {
+  .pageDroits .roleGestion {
+    display: none;
+  }
+  .pageDroits .pastilleRoleList {
+    display: flex;
+  }
+  .pageDroits .roleAdmin {
+    background-color: rgb(19, 219, 176);
+  }
+  .pageDroits .roleUser {
+    background-color: rgb(233, 88, 233);
+  }
+}
 body {
   background-color: #f1f1f1;
   color: #333;

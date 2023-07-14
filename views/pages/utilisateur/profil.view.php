@@ -17,7 +17,7 @@
             <form action="<?= URL ?>compte/validation_modifImageSite" method="post">
                 <label>Par une image du site
                     <i class="fa-solid fa-square-pen" id="btn_modif_img_site"></i>
-                </label><br><br><br>
+                </label><br><br>
             </form>
         </div>
 

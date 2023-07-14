@@ -2,15 +2,17 @@
 const btnModifMail = document.getElementById("btn_modif_mail");
 const divModifMail = document.getElementById("modif_mail");
 
-btnModifMail.addEventListener("click", () => {
-  if (divModifMail.classList.contains("dnone")) {
-    divModifMail.classList.remove("dnone");
-    divModifMdp.classList.add("dnone");
-    divSuppressionCompte.classList.add("dnone");
-  } else {
-    divModifMail.classList.add("dnone");
-  }
-});
+if (btnModifMail) {
+  btnModifMail.addEventListener("click", () => {
+    if (divModifMail.classList.contains("dnone")) {
+      divModifMail.classList.remove("dnone");
+      divModifMdp.classList.add("dnone");
+      divSuppressionCompte.classList.add("dnone");
+    } else {
+      divModifMail.classList.add("dnone");
+    }
+  });
+}
 
 // appararition modif mdp
 const btnModifMdp = document.getElementById("btn_modif_mdp");
@@ -73,33 +75,31 @@ btnSuppCompte.addEventListener("click", () => {
 
 // const mdpMasque = document.querySelector(".fa-eye-slash")
 // const mdpVisible = document.querySelector(".fa-eye")
-const oldPassword = document.querySelector("#oldPassword")
+const oldPassword = document.querySelector("#oldPassword");
 
-mdpMasque.addEventListener("click", ()=>{
+mdpMasque.addEventListener("click", () => {
   // mdpMasque.classList.add("dnone")
   // mdpVisible.classList.remove("dnone")
-  oldPassword.type="text"
-  newPassword.type="text"
-  verifNewPassword.type="text"
-
-})
-mdpVisible.addEventListener("click", ()=>{
+  oldPassword.type = "text";
+  newPassword.type = "text";
+  verifNewPassword.type = "text";
+});
+mdpVisible.addEventListener("click", () => {
   // mdpMasque.classList.remove("dnone")
   // mdpVisible.classList.add("dnone")
-  oldPassword.type="password"
-  newPassword.type="password"
-  verifNewPassword.type="password"
-
-})
+  oldPassword.type = "password";
+  newPassword.type = "password";
+  verifNewPassword.type = "password";
+});
 
 //modale changement image par image site
-const btn_modif_img_site = document.querySelector("#btn_modif_img_site")
-const overlay_img_site = document.querySelector(".overlay_img_site")
+const btn_modif_img_site = document.querySelector("#btn_modif_img_site");
+const overlay_img_site = document.querySelector(".overlay_img_site");
 
-btn_modif_img_site.addEventListener("click", ()=>{
-  overlay_img_site.classList.remove("dnone")
-})
+btn_modif_img_site.addEventListener("click", () => {
+  overlay_img_site.classList.remove("dnone");
+});
 
-overlay_img_site.addEventListener("click", ()=>{
-  overlay_img_site.classList.add("dnone")
-})
+overlay_img_site.addEventListener("click", () => {
+  overlay_img_site.classList.add("dnone");
+});

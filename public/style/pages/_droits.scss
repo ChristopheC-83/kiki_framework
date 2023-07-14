@@ -1,16 +1,53 @@
-.droitsContainer {
-    table {
-      width: 80%;
-      text-align: center;
-      color: #f1f1f1;
-      margin: 10px auto;
-      margin-top: 40px;
-    }
-    th,
-    td,
-    tr {
-      padding: 15px;
-      border: 1px solid #f1f1f1;
-    }
-  
+.pageDroits {
+  table {
+    width: 80%;
+    text-align: center;
+    color: #f1f1f1;
+    margin: 10px auto;
+    margin-top: 40px;
+    font-family: "Roboto Condensed", sans-serif;
   }
+  th,
+  td,
+  tr {
+    padding: 15px;
+    border: 1px solid $noir;
+    color: $noir;
+  }
+  .pastilleRoleList {
+    width: 90%;
+    margin: 0 auto;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    display: none;
+  }
+  .pastilleRole {
+    padding: 20px 30px;
+    border: 1px solid $noir;
+    border-radius: 8px;
+    width: 33%;
+    @include flexMid;
+  }
+
+}
+
+@media screen and (max-width: 900px) {
+  .pageDroits {
+    .roleGestion {
+      display: none;
+    }
+
+    .pastilleRoleList {
+      display: flex;
+    }
+    .roleAdmin {
+      background-color: rgb(19, 219, 176);
+    }
+    .roleUser {
+      background-color: rgb(233, 88, 233);
+    }
+  }
+}

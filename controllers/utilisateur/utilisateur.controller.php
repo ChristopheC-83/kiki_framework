@@ -33,8 +33,6 @@ function profil()
         "page_title" => "Votre profil",
         "view" => "views/pages/utilisateur/profil.view.php",
         "template" => "views/commons/template.php",
-        "css" => "profilContainer",
-        "js" => ['profil.js'],
         "utilisateur" => $datas,
     ];
     genererPage($data_page);
@@ -55,7 +53,7 @@ function validation_creerCompte($login, $password, $mail)
         $cle = rand(0, 999999);
         $img_site = 1; // car on mettra une image du site par défaut en avatar
         if (bdCreerCompte($login, $passwordCrypte, $mail, $cle, "profils/profils_site/profil_init.jpg", $img_site,  "utilisateur")) {
-            sendMailValidation($login, $mail, $cle);
+            // sendMailValidation($login, $mail, $cle);
             // ajouterMessageAlerte("Votre compte a été créer. <br> Merci de la valider via le lien envoyé sur votre adresse mail.", "vert");
             header('location:' . URL . "accueil");
         } else {
@@ -68,20 +66,20 @@ function validation_creerCompte($login, $password, $mail)
     }
 }
 
-function sendMailValidation($login, $mail, $cle)
-{
-    $urlDeVerification = URL . "validationMail/" . $login . "/" . $cle;
-    $sujet = "Création du compte";
-    $message = "Pour valider votre compte, merci de cliquer sur le lien suivant : <br>" . $urlDeVerification;
-    sendMail($mail, $sujet, $message);
-}
+// function sendMailValidation($login, $mail, $cle)
+// {
+//     $urlDeVerification = URL . "validationMail/" . $login . "/" . $cle;
+//     $sujet = "Création du compte";
+//     $message = "Pour valider votre compte, merci de cliquer sur le lien suivant : <br>" . $urlDeVerification;
+//     sendMail($mail, $sujet, $message);
+// }
 
-function renvoyerMailValidation($login)
-{
-    $utilisateur = getUserInformation($login);
-    sendMailValidation($login, $utilisateur['mail'], $utilisateur['cle']);
-    header('location:' . URL . "login");
-}
+// function renvoyerMailValidation($login)
+// {
+//     $utilisateur = getUserInformation($login);
+//     sendMailValidation($login, $utilisateur['mail'], $utilisateur['cle']);
+//     header('location:' . URL . "login");
+// }
 
 
 function validation_modificationMail($mail)
